@@ -1,15 +1,26 @@
 {
-  "name": "oscb-web-client",
+  "name": "shadcn-vite-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "author": "Artemii Averianov <aver.tema.005@yandex.ru>",
   "type": "module",
+  "contributors": [
+    {
+      "name": "Maksim Panfilov",
+      "email": "maks@panf.com"
+    }
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^11.2.0",
     "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slider": "^1.2.3",
@@ -22,6 +33,7 @@
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
     "tailwind-merge": "^3.0.1",
     "tailwindcss": "^4.0.6",
     "tailwindcss-animate": "^1.0.7"
@@ -30,13 +42,21 @@
     "@eslint/js": "^9.19.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "@types/react-helmet": "^6.1.11",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.19.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
     "postcss": "^8.5.2",
+    "prettier": "^3.5.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.22.0",
     "vite": "^6.1.0"
