@@ -1,122 +1,132 @@
-# Шаблон проекта на React + TypeScript + Vite + ShadCN UI + Tailwind + Lucide Icons 🚀
+# Shadcn Vite Boilerplate
 
-## Описание 📝
+A simple **React** boilerplate with **TailwindCSS**, **ShadCN UI**, powered by **Vite** with a fully configured **TypeScript** environment, pre-configured tools such as **ESLint** and **Prettier** and **OpenGraph** support.
 
-Этот репозиторий содержит шаблон для быстрого старта проектов на React с использованием TypeScript, Vite, ShadCN UI, Tailwind CSS и Lucide Icons. Он предоставляет современную архитектуру и инструменты, которые помогут вам сосредоточиться на разработке, а не на настройке окружения.
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/mxpanf/shadcn-vite-starter) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mxpanf/shadcn-vite-starter)
 
+![Preview](public/demo.jpg)
 
-![Project Logo](https://habrastorage.org/webt/mu/q-/li/muq-lifg_k16_x0ob4nbb6f9mys.png)
+## 🚀 Features
 
-## Особенности ✨
+- **TailwindCSS & ShadCN UI** - Easily customize and use components from ShadCN UI.
+- **TypeScript Support** - Fully configured TypeScript project.
+- **Pre-configured ESLint & Prettier** - Code quality and formatting tools out of the box.
+- **Vite-Powered** - Lightning-fast build tool for React projects.
+- **ShadCN UI Components** - Rich UI components such as Avatar, Dialog, Slider, Tabs, etc.
+- **Optimized for Development** - Ready to go with fast hot-reload and dev server.
 
-- **React**: Современная библиотека для построения пользовательских интерфейсов.
-- **TypeScript**: Статическая типизация для повышения надежности кода.
-- **Vite**: Быстрый сборщик и сервер разработки для современных веб-приложений.
-- **ShadCN UI**: Компоненты пользовательского интерфейса для быстрого создания красивых интерфейсов.
-- **Tailwind CSS**: Утилитарный CSS-фреймворк для быстрой и гибкой стилизации.
-- **Lucide Icons**: Набор иконок для использования в ваших проектах.
+## 📂 Project Structure
 
-## Установка ⚙️
-
-1. Клонируйте репозиторий:
-
-   ```bash
-   git clone https://github.com/Aver005/shadcn-vite-template.git
-   ```
-
-2. Перейдите в директорию проекта:
-
-   ```bash
-   cd shadcn-vite-template
-   ```
-
-3. Установите зависимости с помощью Yarn:
-
-   ```bash
-   yarn install
-   ```
-
-4. Запустите проект в режиме разработки:
-
-   ```bash
-   yarn dev
-   ```
-
-5. Откройте [http://localhost:3000](http://localhost:3000) в вашем браузере. 🌐
-
-## Установка компонентов ShadCN UI 🛠️
-
-Чтобы добавить компоненты из библиотеки ShadCN, используйте следующую команду:
-
-```bash
-npx shadcn@latest add button
+```
+.
+├── LICENSE
+├── NOTICE
+├── README.md
+├── components.json
+├── eslint.config.js
+├── index.html
+├── package.json
+├── public
+│   ├── index.html
+│   └── og-image.jpg
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── Button.tsx
+│   │   ├── Heading.tsx
+│   │   ├── MetaTags.tsx
+│   │   └── ThemeToggle.tsx
+│   ├── lib
+│   │   └── utils.ts
+│   ├── main.tsx
+│   ├── styles
+│   │   └── global.css
+│   └── vite-env.d.ts
+├── tailwind.config.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── yarn.lock
 ```
 
-Замените `button` на имя компонента, который вы хотите установить.
+## 🛠️ Installation & Setup
 
+### 1. Clone the repository
 
-[Список компонентов](https://ui.shadcn.com/docs/components/accordion)
+```sh
+git clone https://github.com/mxpanf/shadcn-vite-starter.git
+cd shadcn-vite-starter
+```
 
+### 2. Install dependencies
 
+```sh
+yarn install
+```
 
-## Использование 💻
+### 3. Run the development server
 
-Вы можете начать разрабатывать свой проект, редактируя файлы в директории `src`. Шаблон уже включает базовую структуру и примеры использования компонентов ShadCN UI и Tailwind CSS.
+```sh
+yarn dev
+```
 
+### 4. Open the project
 
+Open your browser and navigate to `http://localhost:3000`.
 
-### Пример использования компонента
+## 🎨 Customization
+
+### Update Meta Tags
+
+For better SEO and social media previews, make sure to update the `<MetaTags />` component in `src/components/MetaTags.tsx`:
 
 ```tsx
-/*
-    Чтобы наполнить папку ./components/ui компонентами
-    Используйте команды shadcn:
-        npx shadcn@latest add button
-*/
-import { Button } from "./components/ui/button";
-
-const App = () => {
-    return (
-        <div className="flex h-screen">
-            <Button variant="outline">Привет, мир! 🌍</Button>
-        </div>
-    );
-};
-
-export default App;
+<MetaTags
+  title="Your App Title"
+  description="A brief description of your project"
+  image="public/og-image.jpg"
+/>
 ```
 
-## Стилизация 🎨
+> Open Graph Сompatible
 
-Шаблон уже настроен для использования Tailwind CSS. Вы можете настраивать стили в файле `tailwind.config.ts` и добавлять свои классы в компоненты.
+> [!WARNING]  
+> Changes in this section are required for full - fledged integration into final application. Check the markup before publishing, some SEO & OG functions may not work.
 
-## Иконки 🖼️
+### Add New Components
 
-Для использования иконок из Lucide Icons, просто импортируйте нужные иконки в ваши компоненты:
+Add new UI components to the `src/components` folder and reference them in `App.tsx`.
 
-```tsx
-import { IconName } from 'lucide-react';
+## 🔧 Configuration
 
-const MyComponent = () => {
-    return <IconName />;
-};
+### TailwindCSS
+
+Tailwind is pre-configured with Vite. You can customize your Tailwind setup by modifying the `tailwind.config.ts` file.
+
+### ESLint & Prettier
+
+This project comes pre-configured with ESLint and Prettier for code quality and consistency. To run ESLint and Prettier:
+
+```sh
+yarn lint     # Run ESLint
+yarn format   # Format code with Prettier
 ```
 
-## Лицензия 📄
+You can also automatically fix linting issues:
 
-Этот проект лицензирован под MIT License. Подробности смотрите в файле [LICENSE](LICENSE).
+```sh
+yarn lint:fix
+```
 
-## Вклад 🤝
+## 📜 License
 
-Если Вы хотите внести свой вклад в проект, пожалуйста, создайте форк репозитория, внесите изменения и отправьте Pull Request. Я буду рад вашим предложениям!
+This project is licensed under the **MIT License**. You are free to use, modify, and distribute this code with proper attribution.
 
-## Контакты 📬
+## 🤝 Contributing
 
-Если у вас есть вопросы или предложения, не стесняйтесь обращаться:
+Contributions are welcome! Feel free to submit a pull request or open an issue.
 
-- **Сайт**: [aaaver.ru](https://aaaver.ru/)
-- **Telegram**: [@aver005](https://t.me/aver005)
+## 💡 Acknowledgments
 
----
-
-Спасибо, что выбрали наш шаблон! Удачной разработки! 🎉
+Built with ❤️ using **React**, **TailwindCSS**, **ShadCN UI**, and **Vite**.
