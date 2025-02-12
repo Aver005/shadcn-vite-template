@@ -55,7 +55,7 @@ A simple **React** boilerplate with **TailwindCSS**, **ShadCN UI**, powered by *
 ### 1. Clone the repository
 
 ```sh
-git clone https://github.com/mxpanf/shadcn-vite-starter.git
+git clone https://github.com/aver005/shadcn-vite-template.git
 cd shadcn-vite-starter
 ```
 
